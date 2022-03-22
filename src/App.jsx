@@ -13,11 +13,11 @@ function App() {
   return (
     <div>
       <Container>
-        <Header />
-        <Testi luku = "1" name="About Us"/>
-        <Testi luku = "2" name="Skills"/>
-        <Testi luku = "3" name="Projects"/>
-        <Testi luku = "4" name="Contact"/>
+        <Header/>
+          <Testi luku = "1" name="About Us"/>
+          <Testi luku = "2" name="Skills"/>
+          <Testi luku = "3" name="Projects"/>
+          <Testi luku = "4" name="Contact"/> 
       </Container>
     </div>
   );
