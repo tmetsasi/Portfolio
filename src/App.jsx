@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 const Container = styled.div`
   height: 100vw;
   width: 100vw;
-  background-color: #ffff;
+  background-color: #d8d8d8;
 `;
 
 function App() {
