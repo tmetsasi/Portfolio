@@ -9,7 +9,7 @@ const StyledHeader = styled.div`
 export const Header = () => {
   return (
     <div>
-      <StyledHeader />
+      <StyledHeader> Fima</StyledHeader>
     </div>
   );
 };
