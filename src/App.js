@@ -1,5 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import styled from "styled-components";
+
+const StyledButton = styled.div`
+  height: 2rem;
+  width: 2rem;
+  background-color: #ffff;
+`;
 
 function App() {
   return (
@@ -17,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <StyledButton />
       </header>
     </div>
   );
