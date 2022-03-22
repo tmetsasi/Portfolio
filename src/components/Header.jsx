@@ -11,9 +11,11 @@ const StyledHeader = styled.div`
 export const Header = () => {
   return (
     <div>
+
       <StyledHeader>
         <Heading1>About Us</Heading1>
       </StyledHeader>
+
     </div>
   );
 };
