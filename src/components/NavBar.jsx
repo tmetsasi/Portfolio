@@ -15,10 +15,10 @@ const NavBar = styled.div`
 export const NavigationBar = () => {
   return (
     <NavBar>
-      <NavButton text="About Us" />
+      <NavButton text="Introduction" />
       <NavButton text="Skills" />
       <NavButton text="Experience" />
-      <NavButton text="Contacts" />
+      <NavButton text="Contact" />
     </NavBar>
   );
 };
