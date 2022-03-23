@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const StyledBurgerMenu = styled.button`
   all: unset;
-  position: relative;
-  left: 65%;
+  position: absolute;
+  left: 88%;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
