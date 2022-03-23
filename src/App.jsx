@@ -1,7 +1,6 @@
 import "./Global.css";
 import styled from "styled-components";
 import { Header } from "./components/Header";
-import { Testi } from "./components/MenuElement";
 import { SkillsView } from "./views/Skills";
 import { ExperienceView } from "./views/Experience";
 import { Footer } from "./components/Footer";
@@ -20,7 +19,9 @@ function App() {
       <MainPage>
         <SkillsView />
         <ExperienceView />
+        <Footer/>
       </MainPage>
+      
     </div>
   );
 }

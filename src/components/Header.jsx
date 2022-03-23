@@ -11,6 +11,7 @@ const StyledHeader = styled.div`
   text-align: center;
 `;
 
+
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const [button, setButton] = useState(true);
