@@ -21,7 +21,6 @@ function App() {
         <SkillsView />
         <ExperienceView />
       </MainPage>
-      <Footer />
     </div>
   );
 }
