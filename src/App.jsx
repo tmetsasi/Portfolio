@@ -2,23 +2,26 @@ import "./Global.css";
 import styled from "styled-components";
 import { Header } from "./components/Header";
 import { Testi } from "./components/MenuElement";
+import { SkillsView } from "./views/Skills";
+import { ExperienceView } from "./views/Experience";
+import { Footer } from "./components/Footer";
 
-const Container = styled.div`
-  height: 100vw;
+const MainPage = styled.div`
+  height: 400vh;
   width: 100vw;
-  background-color: #d8d8d8;
+  background-color: #ececec;
+  padding: 2rem;
 `;
 
 function App() {
   return (
     <div>
-      <Container>
-        <Header/>
-          <Testi luku = "1" name="About Us"/>
-          <Testi luku = "2" name="Skills"/>
-          <Testi luku = "3" name="Projects"/>
-          <Testi luku = "4" name="Contact"/> 
-      </Container>
+      <Header />
+      <MainPage>
+        <SkillsView />
+        <ExperienceView />
+      </MainPage>
+      <Footer />
     </div>
   );
 }
