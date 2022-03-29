@@ -1,59 +1,94 @@
-import React from "react";
-import {
-  Box,
-  Container,
-  Row,
-  Column,
-  FooterLink,
-  Heading,
-} from "./FooterStyles";
+import styled from 'styled-components';
+import React from 'react';
+   
+const Box = styled.div`
+  padding: 90px;
+  background: #203942;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   
+   
+  @media (max-width: 1000px) {
+    padding: 80px;
+  }
+`;
+   
+const Heading = styled.p`
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 4vh;
+  font-weight: lighter;
+`;
+
+const FooterPic = styled.img`
+  height: 30%;
+  width: 30%;
+`;
+
+const TextChapter = styled.p`
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 5vh;
+`;
+
+const Row = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  grid-gap: 20%;
+   
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+`;
+
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 5vh;
+  color: #fff;
+  font-style: italic;
+`;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    
+`;
+
 export const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "yellow", 
-                   textAlign: "center", 
-                   marginTop: "-50px" }}>
-        Foami yhteystiedot
-      </h1>
-      <Container>
+     <FooterPic src={'/images/HeaderLogo.png'}/>
+      <Heading> Yhteystiedot</Heading>
+      <TextChapter>foamioy@outlook.com</TextChapter>
+      <Container> 
         <Row>
-          <Column>
-            <Heading>Yhteystiedot</Heading>
-            <FooterLink href="#">Tomas Metsä-Simola</FooterLink>
-            <FooterLink href="#">Luukas Kumpulainen</FooterLink>
+         <Column> 
+         Tomas Metsä-Simola 9253053523
+         <br/>
+         Luukas Kumpulainen 9348693468 
+         </Column>
+          <Column> 
+          Osoitetietoja: 
+          <br/>
+          Takomotie 14 C 36 <br/> 00380 Helsinki 
           </Column>
-          <Column>
-            <Heading>Jotain lisää ehkä</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
+          <Column> 
+          Yritystiedot: <br/>
+          Foami OY <br/>
+          Y-2664624
+          <br/>
           </Column>
-          <Column>
-            <Heading>Yritystiedot</Heading>
-            <FooterLink href="#">
-              <i className="fab fa-Foami OY-f">
-                <span style={{ marginLeft: "10px" }}>
-                  Foami OY
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-instagram">
-                <span style={{ marginLeft: "10px" }}>
-                  Instagram
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-twitter">
-                <span style={{ marginLeft: "10px" }}>
-                  Twitter
-                </span>
-              </i>
-            </FooterLink>
-          </Column>
-        </Row>
+         </Row>
       </Container>
     </Box>
   );

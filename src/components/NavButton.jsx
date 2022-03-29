@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const NavigationButton = styled.button`
-  background-color: #5e5e5e;
+  background-color: #143c4b;
   border: none;
   color: #dddddd;
   height: 90%;

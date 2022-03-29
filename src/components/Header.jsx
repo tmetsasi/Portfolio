@@ -5,18 +5,17 @@ import { BurgerMenu } from "./BurgerMenu";
 import { React, useState, useEffect } from "react";
 
 const StyledHeader = styled.div`
-  background-color: #5e5e5e;
+  background-color: #143c4b;
   width: 100%;
   height: 4rem;
   text-align: center;
 `;
 
-
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const [button, setButton] = useState(true);
   const showButton = () => {
-    if (window.innerWidth <= 700) {
+    if (window.innerWidth <= 650) {
       setButton(true);
     } else {
       setButton(false);
