@@ -2,53 +2,54 @@ import React from "react";
 import styled from 'styled-components';
 import { HiBadgeCheck } from "react-icons/hi";
 
-const KokoRoska = styled.div`
+const MainBox = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     background: #fff;
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
+    padding: 2.4rem;
+    border-radius: 0 0 2rem 2rem;
     border: 1px solid transparent;
-    row-gap: 2rem;
+    
 `;
 
-const JokuRoska = styled.div`
+const BoxPart = styled.div`
     background: #3553;
-    padding: 2.4rem 5rem;
+    padding: 2.4rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    transition: var(--transition);
+    transition: 1.5s;
     gap: 2rem;
     cursor: pointer;
     &:hover { 
        background-color: #407388;
        cursor: default;
+       opacity: 0.8;
+    }
+    @media screen and (max-width: 90vh) {
+        gap: 1rem;
+        width: 100%;
+        padding: 2rem;
+        display: block;
     }
 `;
 
-const Heading3 = styled.div`
+const UpperBox = styled.div`
+    background: #fff;
+    border-radius: 1rem;
     text-align: center;
-    margin-bottom: 2rem;
-    
-`;
-
-const Osahomma = styled.section`
-
 `;
 
 
 export const Tools = () => { 
     return ( 
-        <Osahomma>
-            <h4> Meidän työkalumme</h4>
-
-            <KokoRoska>
+        <UpperBox>Jotain dataa 
+            <MainBox> 
                 
+                    <BoxPart>
                     
-                    <JokuRoska>
                         <article className='experience_details'>
                             <HiBadgeCheck/>
                             <h4>HTML</h4>
@@ -72,12 +73,18 @@ export const Tools = () => {
                             <h4>React</h4>
                             <small className='text-light'> Experienced </small>
                         </article>
-                    </JokuRoska>
+                        <article className='experience_details'>
+                            <HiBadgeCheck/>
+                            <h4>Figma</h4>
+                            <small className='text-light'> Experienced </small>
+                        </article>
+                    </BoxPart>
                 
                 {/* tässä vaihtuu boksi backendiin */}
                 
                 
-                    <JokuRoska>
+                    <BoxPart>
+                        
                         <article className='experience_details'>
                             <HiBadgeCheck/>
                             <h4>Node js</h4>
@@ -101,9 +108,14 @@ export const Tools = () => {
                             <h4>Scala</h4>
                             <small className='text-light'> Experienced </small>
                         </article>
-                    </JokuRoska>
+                        <article className='experience_details'>
+                            <HiBadgeCheck/>
+                            <h4>Docker</h4>
+                            <small className='text-light'> Experienced </small>
+                        </article>
+                    </BoxPart>
                 
-            </KokoRoska>
-        </Osahomma>
+            </MainBox>
+         </UpperBox>
     )
 }
