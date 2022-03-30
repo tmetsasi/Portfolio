@@ -1,10 +1,12 @@
 import "./Global.css";
 import styled from "styled-components";
 import { Header } from "./components/Header";
-import { SkillsView } from "./views/Skills";
-import { ExperienceView } from "./views/Experience";
 import { Footer } from "./components/Footer";
 import { Tools } from "./views/ToolsBar";
+import { Profiles } from "./views/Profiles";
+import { ProjectsView } from "./views/Projects";
+import { IntroductionView } from "./views/Introduction";
+import { ContactBar } from "./views/ContactUs";
 
 const MainPage = styled.div`
   height: 200vh;
@@ -18,10 +20,11 @@ function App() {
     <div>
       <Header />
       <MainPage>
-        
-      
-        
+        <IntroductionView/>
+        <Profiles/>
+        <ProjectsView/>
         <Tools/>
+        <ContactBar/>
       </MainPage>
       <Footer/>
     </div>

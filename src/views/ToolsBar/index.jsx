@@ -81,7 +81,7 @@ const listItem = {
 
 export const Tools = () => {
   return (
-    <TrackVisibility>
+    <TrackVisibility once>
       {({ isVisible }) =>
         isVisible ? (
           <motion.div
