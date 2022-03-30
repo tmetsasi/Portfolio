@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { NavButton } from "./NavButton";
 import { React, useState } from "react";
 
-
 const NavBar = styled.div`
   display: flex;
   position: relative;
@@ -19,13 +18,11 @@ const NavImage = styled.img`
   width: auto;
   margin-left: auto;
   margin-right: auto;
-
 `;
 
 export const NavigationBar = () => {
   return (
     <NavBar>
-      <NavImage src={'/images/HeaderLogo.png'}/>
       <NavButton text="Esittely" />
       <NavButton text="Työkalumme" />
       <NavButton text="Projektit" />

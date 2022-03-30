@@ -5,10 +5,18 @@ import { BurgerMenu } from "./BurgerMenu";
 import { React, useState, useEffect } from "react";
 
 const StyledHeader = styled.div`
+  display: flex;
   background-color: #143c4b;
   width: 100%;
   height: 4rem;
   text-align: center;
+`;
+
+const NavImage = styled.img`
+  display: flex;
+  position: relative;
+  height: 100%;
+  left: 10%;
 `;
 
 export const Header = () => {
@@ -31,12 +39,14 @@ export const Header = () => {
   if (button)
     return (
       <StyledHeader>
+        <NavImage src={"/images/HeaderLogo.png"} />
         <BurgerMenu open={open} setOpen={setOpen} />
       </StyledHeader>
     );
   else
     return (
       <StyledHeader>
+        <NavImage src={"/images/HeaderLogo.png"} />
         <NavigationBar />
       </StyledHeader>
     );
