@@ -10,3 +10,15 @@ Meiltä voi tilata myös olemassa olevien verkkosivujen ylläpidon.
 
 Asiakkaalla on mahdollisuus seurata projektin etenemistä osana kehitystiimiä. Otamme vastaan mielellämme graafisen suunnittelun näkemyksiä ja toiveita visuaalisesta ilmeestä. 
 Tarjoamme miellyttävän asiakaskokemuksen, jonka myötä 
+
+Esittely: 
+Monen vuoden ohjelmointikokemus
+
+Projektit: 
+Kone
+Käyttäjälähtöinen tuotekehitys, apusovellus kivijalkakauppojen asiakkaille
+Visuaalisen käyttöliittymän pelisovelluksia 
+Puolustusvoimien verkkosivujen ylläpito varusmiehenä
+Verkkosivuja tutkinnon kursseilla 
+
+
