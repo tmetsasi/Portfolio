@@ -20,5 +20,6 @@ Käyttäjälähtöinen tuotekehitys, apusovellus kivijalkakauppojen asiakkaille
 Visuaalisen käyttöliittymän pelisovelluksia 
 Puolustusvoimien verkkosivujen ylläpito varusmiehenä
 Verkkosivuja tutkinnon kursseilla 
+Sit viä joku viides
 
 
