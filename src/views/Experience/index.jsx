@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { ContainerL, ContainerS } from "../../components/Container";
+import { Heading1 } from "../../types/typography";
 
 const ExpFrame = styled.div`
   display: flex;
@@ -14,7 +15,9 @@ const ExpFrame = styled.div`
 export const ExperienceView = () => {
   return (
     <ExpFrame>
+      <Heading1> Frontend </Heading1>
       <ContainerS />
+      <Heading1> Backend </Heading1>
       <ContainerL />
     </ExpFrame>
   );

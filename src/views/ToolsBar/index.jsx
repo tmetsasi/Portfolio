@@ -3,22 +3,29 @@ import styled from "styled-components";
 import { HiBadgeCheck } from "react-icons/hi";
 import TrackVisibility from "react-on-screen";
 import { motion } from "framer-motion";
+import { Heading1 } from "../../types/typography";
 
 const MainBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-column-gap: 5%;
   background: #fff;
-  padding: 2.4rem;
+  padding: 5%;
   border-radius: 2rem;
   border: 1px solid transparent;
   ul {
     list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  @media screen and (max-width: 120vh) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const BoxPart = styled.div`
   background: #3553;
+  margin: 5%;
   padding: 2.4rem;
   border-radius: 2rem;
   border: 1px solid transparent;
@@ -31,12 +38,6 @@ const BoxPart = styled.div`
     background-color: #407388;
     cursor: default;
     opacity: 0.8;
-  }
-  @media screen and (max-width: 90vh) {
-    gap: 1rem;
-    width: 100%;
-    padding: 2rem;
-    display: block;
   }
 `;
 
@@ -81,7 +82,7 @@ const listItem = {
 
 export const Tools = () => {
   return (
-    <TrackVisibility>
+    <TrackVisibility once>
       {({ isVisible }) =>
         isVisible ? (
           <motion.div
@@ -114,9 +115,7 @@ export const Tools = () => {
                   ))}
                 </BoxPart>
               </motion.ul>
-
               {/* tässä vaihtuu boksi backendiin */}
-
               <motion.ul
                 variants={Rightcontainer}
                 initial="hidden"
