@@ -12,11 +12,8 @@ const Contact = styled.div`
 export const ContactBar = () => {
     return ( 
         <Contact> 
-            Etusivun muotoilu Figmassa
-        </Contact>
             
-
-        
+        </Contact> 
 
     )
 };

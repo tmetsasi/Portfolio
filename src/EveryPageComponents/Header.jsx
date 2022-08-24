@@ -9,6 +9,7 @@ const StyledHeader = styled.div`
   width: 100%;
   height: 4rem;
   text-align: center;
+  position: fixed;
 `;
 
 const NavImage = styled.img`
