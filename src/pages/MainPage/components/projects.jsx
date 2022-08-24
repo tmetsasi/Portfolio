@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const ProjectBox = styled.div`
     background: #aaa5a5;
@@ -12,11 +13,6 @@ const ProjectBox = styled.div`
 export const ProjectsView = () => {
     return ( 
         <ProjectBox> 
-            Tähän tulee projekteja mitä me on suoritettu
         </ProjectBox>
-            
-
-        
-
     )
 };

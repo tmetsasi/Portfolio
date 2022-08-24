@@ -1,33 +1,20 @@
 import "./Global.css";
-import styled from "styled-components";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Tools } from "./views/ToolsBar";
-import { Profiles } from "./views/Profiles";
-import { ProjectsView } from "./views/Projects";
-import { IntroductionView } from "./views/Introduction";
-import { ContactBar } from "./views/ContactUs";
-
-const MainPage = styled.div`
-  height: 200vh;
-  width: 100vw;
-  background-color: #407388;
-  padding: 2rem;
-`;
+import {Route, Routes} from "react-router-dom";
+import AboutUsPage from "./pages/AboutUsPage/AboutUs";
+import React from "react";
+import MainPage from "./pages/MainPage/MainPage";
+import ToolsPage from "./pages/ToolsPage/ToolsPage";
+import ServicesPage from "./pages/ServicesPage/Services";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <MainPage>
-        <IntroductionView/>
-        <Profiles/>
-        <ProjectsView/>
-        <Tools/>
-        <ContactBar/>
-      </MainPage>
-      <Footer/>
-    </div>
+    <Routes> 
+      <Route path="/" element={<MainPage/>} />
+      <Route path="/tyokalut" element={<ToolsPage/>} />
+      <Route path="/me" element={<AboutUsPage/>} />
+      <Route path="/palvelut" element={<ServicesPage/>} />
+
+    </Routes>
   );
 }
 

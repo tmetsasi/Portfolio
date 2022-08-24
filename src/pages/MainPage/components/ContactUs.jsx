@@ -12,8 +12,7 @@ const Contact = styled.div`
 export const ContactBar = () => {
     return ( 
         <Contact> 
-            Alimpana varsinaisessa sisällössä contacti baari johon voi syöttää yhteystiedot ja viestin
-            jotka ohjaantuu meille sitte jotenki
+            Etusivun muotoilu Figmassa
         </Contact>
             
 

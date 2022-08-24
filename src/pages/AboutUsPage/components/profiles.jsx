@@ -10,6 +10,7 @@ width: 300px;
 background-size: cover;
 border-radius: 10rem;
 display: block;
+background-color: #88c7ff;
 `;
 
 const ProfileBackground = styled.div`
@@ -21,8 +22,8 @@ const ProfileBackground = styled.div`
 export const Profiles = () => {
     return ( 
         <ProfileBackground> 
-            <ProfilePic src = {'/images/lkPhoto.png'}/> 
-            <ProfilePic src = {'/images/tmsPhoto.png'}/> 
+            <ProfilePic src = {'/images/pexels-paul-ijsendoorn-33041.jpg' }/> 
+            <ProfilePic src = {'/images/pexels-paul-ijsendoorn-33041.jpg'}/> 
         </ProfileBackground>
             
 

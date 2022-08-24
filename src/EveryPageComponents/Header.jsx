@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Heading1 } from "../types/typography";
 import { NavigationBar } from "./NavBar";
 import { BurgerMenu } from "./BurgerMenu";
 import { React, useState, useEffect } from "react";

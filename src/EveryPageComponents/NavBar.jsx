@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { NavButton } from "./NavButton";
 import { React, useState } from "react";
+import {Link} from "react-router-dom";
 
 const NavBar = styled.div`
   display: flex;
@@ -23,10 +24,24 @@ const NavImage = styled.img`
 export const NavigationBar = () => {
   return (
     <NavBar>
-      <NavButton text="Esittely" />
-      <NavButton text="Työkalumme" />
+      <Link to="/"> 
+      <NavButton text="Etusivu" />
+      </Link>
+      <Link to="/me"> 
+      <NavButton text="Meistä" />
+      </Link>
+      <Link to="/palvelut"> 
+      <NavButton text="Palvelut" />
+      </Link>
+      <Link to="/tyokalut"> 
+      <NavButton text="Työkalut" />
+      </Link>
+      <Link to="/"> 
       <NavButton text="Projektit" />
-      <NavButton text="Ota yhteyttä" />
+      </Link>
+      <Link to="/"> 
+      <NavButton text="Yhteystiedot" />
+      </Link>
     </NavBar>
   );
 };
