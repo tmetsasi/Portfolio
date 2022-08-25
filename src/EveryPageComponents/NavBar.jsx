@@ -11,6 +11,7 @@ const NavBar = styled.div`
   flex-direction: row;
   justify-content: right;
   padding-right: 5rem;
+  z-index: 1;
 `;
 
 const NavImage = styled.img`

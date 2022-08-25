@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const Contact = styled.div`
-    background: #aaa5a5;
-    padding: 5vh;
-    margin: 4vh;
-    border: 2px;
-    border-color: #fff;
+const ContactBox = styled.div`
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    bottom: 40rem;
+    background-color: blue; 
 `;
 
 export const ContactBar = () => {
     return ( 
-        <Contact> 
+        <ContactBox> 
             
-        </Contact> 
+        </ContactBox> 
 
     )
 };

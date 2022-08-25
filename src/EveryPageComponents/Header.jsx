@@ -10,6 +10,7 @@ const StyledHeader = styled.div`
   height: 4rem;
   text-align: center;
   position: fixed;
+  z-index: 1;
 `;
 
 const NavImage = styled.img`

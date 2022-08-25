@@ -2,13 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
    
 const Box = styled.div`
-  padding: 90px;
+  padding: 50px;
   background: #203942;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  
-   
   @media (max-width: 1000px) {
     padding: 80px;
   }
