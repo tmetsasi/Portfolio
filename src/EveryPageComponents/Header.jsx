@@ -24,7 +24,7 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   const [button, setButton] = useState(true);
   const showButton = () => {
-    if (window.innerWidth <= 650) {
+    if (window.innerWidth <= 800) {
       setButton(true);
     } else {
       setButton(false);

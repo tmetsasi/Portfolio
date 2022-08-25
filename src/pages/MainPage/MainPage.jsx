@@ -18,15 +18,24 @@ const MainPageStats = styled.div`
 const HeroText = styled.div`
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3vh;
+  font-size: 2.4vw;
   color: white;
   background-color: #4e4e4e78;
   width: 40%;
-  height: 30%;
+  height: 20%;
   top: 30%; 
   left: 5vw;
   text-align: center;
+
+  @media (max-width: 800px){ 
+    width: 80%;
+    height: 25%;
+    top: 60%;
+    left: 5vw;
+    font-size: 3vw;
+  }
 `;
+
 
 const HeroVid = styled.video`
   position: relative;
@@ -40,14 +49,20 @@ const HeroContti = styled.div`
 
 
 const SkillsContti = styled.div`
-position: relative;
+  @media (min-width: 800px) { 
+    position: relative;
   width: 100%;
   height: 50vw;
   color: white;
 padding: 5%;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
+
 `;
 
-const Joku = styled.div`
+const LinkBox = styled.div`
   width: 9vw;
   height: 3vw;
   background-color: #40728821;
@@ -56,6 +71,22 @@ const Joku = styled.div`
   margin-top: 22%;
   margin-left: 63%;
   z-index: 0;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const SkillsConttiPhone = styled.div`
+  @media (max-width: 800px) { 
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+  @media (min-width: 800px) {
+    display: none;
+  }
+
 `;
 
 const ServicesContti = styled.div`
@@ -66,6 +97,18 @@ const ServicesContti = styled.div`
   z-index: 0;
   padding: 5%;
   color: white;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const ServicesConttiPhone = styled.div`
+  @media (max-width: 800px) {
+    position: relative;
+  }
+  @media (min-width: 800px){ 
+    display: none;
+  }
 `;
 
 const Kuva = styled.img`
@@ -75,29 +118,22 @@ const Kuva = styled.img`
   
 `;
 
-const Otsikko = styled.div`
-  color: white;
-  text-align: justify;
+const ServiceBox = styled.div`
   position: relative;
-  font-size: 200%;
-  margin-bottom: 2%;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding: 2%;
+  border-radius: 2rem;
 `;
 
-const Chapter = styled.div`
-  color: white;
-  text-align: justify;
-  position: absolute;
-  font-size: 200%;
-  bottom: 10%;
-`;
 
-const Texti = styled.div`
-  color: white;
-  text-align: left;
+const ServiceLink = styled.div`
+  width: 34vw;
+  height: 2.5vw;
   position: absolute;
-  font-size: 150%;
-  bottom: 25%;
-  right: 7%;
+  bottom: 11%;
+  left: 8%;
 `;
 
 const ToolsContti = styled.div`
@@ -107,6 +143,9 @@ const ToolsContti = styled.div`
   position: relative;
   right: 0;
   z-index: 0;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const SecondVid = styled.video`
@@ -119,6 +158,9 @@ const ProjectsContti = styled.div`
   width: 100%;
   height: 70vh;
   position: relative;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 function MainPage() { 
@@ -137,30 +179,34 @@ function MainPage() {
             digitaalisia vastauksia <br/> yhteisen haasteen ratkaisuun.
               </HeroText>
               </HeroContti> 
+
+
               <SkillsContti>
                 <Kuva src="/images/SkillsView.png"/>
                <Link to="/me"> 
-                <Joku/>
+                <LinkBox/>
                </Link>
               </SkillsContti>
-            
+              <SkillsConttiPhone> 
+                <Kuva src="/images/SkillsPhone.png"/>
+                
+              </SkillsConttiPhone>
 
-            <ServicesContti>
-              <Otsikko> 
-              Palvelumme tuovat joustavan yhteistyön osaksi arkea
-                </Otsikko> 
-              <Kuva src="/images/servicesView.png"/>
-                <Texti> 
-                Suunnittelemme, rakennamme ja ylläpidämme ohjelmistoja. Palvelumme
-                 kustomoidaan <br/> jokaiselle asiakkaalle tapauskohtaisesti ja tarpeita
-                  arvioidaan <br/> innostavimman lopputuloksen takaamiseksi.
-                </Texti>
-              <Chapter> 
-                <Link to="/palvelut"> 
-                <p> Tutustu tarjoamiimme palveluihin -&gt; </p> 
-                </Link>
-              </Chapter>
+            <ServicesContti> 
+              <ServiceBox> 
+              <Kuva src="/images/Untitled2.png"/>
+              </ServiceBox>
+              <Link to="/palvelut"> 
+              <ServiceLink/>
+              </Link>
               </ServicesContti> 
+              <ServicesConttiPhone> 
+                <ServiceBox> 
+                
+                <Kuva src="/images/ServicesViewPhone.png"/>
+
+                </ServiceBox>
+              </ServicesConttiPhone>
 
 
             <ToolsContti> 
@@ -172,7 +218,7 @@ function MainPage() {
 
             <ProjectsContti> 
               
-              </ProjectsContti>  
+              </ProjectsContti> 
 
             <ContactBar/>
             <Footer/>
