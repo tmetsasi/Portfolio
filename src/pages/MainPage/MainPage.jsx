@@ -1,14 +1,13 @@
 import React from "react";
 import { Header } from "../../EveryPageComponents/Header";
 import { Footer } from "../../EveryPageComponents/Footer";
-import { ProjectsView } from "./components/projects";
-import { ContactBar } from "./components/ContactUs";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-
+import { Projects } from "./components/Projects";
+import { ContactUs } from "./components/ContactUs/ContactUs";
 
 const MainPageStats = styled.div`
-  height: 5000px;
+  height: 6000px;
   width: 100%;
   background-color: #407388;
   position: relative;
@@ -86,7 +85,14 @@ const SkillsConttiPhone = styled.div`
   @media (min-width: 800px) {
     display: none;
   }
+`;
 
+const SkillsLinkPhone = styled.div`
+  height: 3vh;
+  width: 14vw;
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
 `;
 
 const ServicesContti = styled.div`
@@ -95,7 +101,7 @@ const ServicesContti = styled.div`
   position: relative;
   background-color: #407388;
   z-index: 0;
-  padding: 5%;
+  padding: 3%;
   color: white;
   @media (max-width: 800px) {
     display: none;
@@ -105,10 +111,19 @@ const ServicesContti = styled.div`
 const ServicesConttiPhone = styled.div`
   @media (max-width: 800px) {
     position: relative;
+    padding: 3%;
   }
   @media (min-width: 800px){ 
     display: none;
   }
+`;
+
+const ServicesLinkPhone = styled.div`
+  width: 73vw;
+  height: 3.7vh;
+  position: absolute;
+  left: 11%;
+  bottom: 1%;
 `;
 
 const Kuva = styled.img`
@@ -134,23 +149,47 @@ const ServiceLink = styled.div`
   position: absolute;
   bottom: 11%;
   left: 8%;
+  background-color: aliceblue;
 `;
 
 const ToolsContti = styled.div`
-  background-color: green;
-  width: 70%;
+  width: 100%;
   height: auto;
   position: relative;
   right: 0;
   z-index: 0;
-  @media (max-width: 800px) {
-    display: none;
-  }
+ 
 `;
 
 const SecondVid = styled.video`
   position: relative;
   width: 100%;
+`;
+
+const ToolsText = styled.div`
+  background-color: #4e4e4e78;
+  position: absolute;
+  height: 20%;
+  width: 47%;
+  bottom: 57%;
+  left: 5%;
+  font-size: 2.4vw;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+`;
+
+const ToolsLink = styled.div`
+  background-color: #4e4e4e78;
+  position: absolute;
+  height: 8%;
+  width: 47%;
+  bottom: 17%;
+  left: 40%;
+  font-size: 2.4vw;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 `;
 
 const ProjectsContti = styled.div`
@@ -162,6 +201,133 @@ const ProjectsContti = styled.div`
     display: none;
   }
 `;
+
+const ProjectsHeader = styled.div`
+  background-color: gray;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+`;
+
+const ContactBar = styled.div`
+  height: auto;
+  width:auto;
+  position: relative;
+  margin-top: 10vh;
+  padding: 1rem;
+`;
+
+const ContactBarHeader = styled.div`
+  height: 10vh;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  margin-top: 3vh;
+  text-align: center;
+  
+`;
+
+const ContactBarText = styled.div`
+  height: 8vh;
+  width: 50%;
+  background-color: green;
+  position: absolute;
+  margin-top: 20vh;
+  font-size: medium;
+  margin-left: 3vw;
+`;
+
+const ContactBarPhoto = styled.span`
+  height: 15vw;
+  width: 15vw;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: black;
+  position: absolute;
+  margin-top: 45vh;
+  margin-left: 3vw;
+`;
+
+const ContactBarPhotoSec = styled.span`
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: black;
+  position: absolute;
+  margin-top: 45vh;
+  margin-left: 45vw;
+`;
+
+const ContactBarInfo = styled.div`
+  height: 10vh;
+  width: 30%;
+  position: absolute;
+  margin-top: 65vh;
+  background-color: blue;
+`
+const ContactBarInfoSec = styled.div`
+  height: 10vh;
+  width: 30%;
+  position: absolute;
+  margin-top: 65vh;
+  margin-left: 40vw;
+  background-color: blue;
+`
+const ContactBarName = styled.div`
+  height: 2vh;
+  width: 15vw;
+  position: absolute;
+  margin-top: 15vh;
+  margin-left: 80%;
+  background-color: aquamarine;
+`
+const ContactBarMail = styled.div`
+  height: 2vh;
+  width: 15vw;
+  position: absolute;
+  margin-top: 18vh;
+  margin-left: 80%;
+  background-color: aquamarine;
+`
+const ContactBarPhone = styled.div`
+  height: 2vh;
+  width: 15vw;
+  position: absolute;
+  margin-top: 21vh;
+  margin-left: 80%;
+  background-color: aquamarine;
+`
+const ContactBarCase = styled.div`
+  height: 12vh;
+  width: 15vw;
+  position: absolute;
+  margin-top: 24vh;
+  margin-left: 80%;
+  background-color: aquamarine;
+`
+const ContactBarSend = styled.div`
+  height: 2vh;
+  width: 7vw;
+  position: absolute;
+  margin-top: 37vh;
+  margin-left: 80%;
+  background-color: aquamarine;
+  text-align: justify;
+`
+const Contact = styled.div`
+  background-color: red;
+  width: 40vw;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+`;
+
+const ContactBarImg = styled.img`
+  
+`
+
 
 function MainPage() { 
     return ( 
@@ -189,7 +355,9 @@ function MainPage() {
               </SkillsContti>
               <SkillsConttiPhone> 
                 <Kuva src="/images/SkillsPhone.png"/>
-                
+                <Link to="/me"> 
+                <SkillsLinkPhone/>
+                </Link>
               </SkillsConttiPhone>
 
             <ServicesContti> 
@@ -202,9 +370,10 @@ function MainPage() {
               </ServicesContti> 
               <ServicesConttiPhone> 
                 <ServiceBox> 
-                
                 <Kuva src="/images/ServicesViewPhone.png"/>
-
+                <Link to="/palvelut"> 
+                <ServicesLinkPhone/>
+                </Link>
                 </ServiceBox>
               </ServicesConttiPhone>
 
@@ -213,14 +382,28 @@ function MainPage() {
             <SecondVid autoPlay muted loop id="vidi"> 
             <source src="/images/herovideo.mp4" type="video/mp4"/>
             </SecondVid>
-            
+            <ToolsText> 
+              Kehitys-teknologiamme koostuu alan tuoreimmista
+               työkaluista ja ohjelmistoista
+            </ToolsText>
+            <Link to="/tyokalut"> 
+            <ToolsLink> 
+              Tarkastele Foamin suosimia työkaluja -&gt;
+            </ToolsLink>
+            </Link>
             </ToolsContti>
 
-            <ProjectsContti> 
-              
-              </ProjectsContti> 
+            <ProjectsHeader>
+            </ProjectsHeader> 
 
-            <ContactBar/>
+            <ContactBar>
+              <ContactBarImg src="/images/ContactBar.png"/> 
+              
+              <ContactUs/>
+
+               
+            </ContactBar> 
+                    
             <Footer/>
             
 
