@@ -11,11 +11,12 @@ const Formi = styled.form`
  background: #407388;
  position: absolute;
  left: 64%;
- top: 20%;
+ top: 19%;
  background-color: #407388;
  width: 34vw;
- height: 33vw;
+ height: 34vw;
  font-size: 2vw;
+ 
 `;
 
 const Name = styled.input`

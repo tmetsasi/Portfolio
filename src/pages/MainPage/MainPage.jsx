@@ -5,9 +5,11 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 import { Projects } from "./components/Projects";
 import { ContactUs } from "./components/ContactUs/ContactUs";
+import { Funktio } from "./components/MainCaro/Caro";
+import { Staili } from "./components/MainCaro/Caro";
 
 const MainPageStats = styled.div`
-  height: 6000px;
+  height: auto;
   width: 100%;
   background-color: #407388;
   position: relative;
@@ -193,9 +195,9 @@ const ToolsLink = styled.div`
 `;
 
 const ProjectsContti = styled.div`
-  background-color: gray;
+  background-color: #407388;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   position: relative;
   @media (max-width: 800px) {
     display: none;
@@ -215,6 +217,7 @@ const ContactBar = styled.div`
   position: relative;
   margin-top: 10vh;
   padding: 1rem;
+  padding-bottom: 6vh;
 `;
 
 const ContactBarHeader = styled.div`
@@ -393,8 +396,12 @@ function MainPage() {
             </Link>
             </ToolsContti>
 
-            <ProjectsHeader>
-            </ProjectsHeader> 
+            <ProjectsContti> 
+              <Funktio/>
+            </ProjectsContti>
+            
+
+            
 
             <ContactBar>
               <ContactBarImg src="/images/ContactBar.png"/> 
@@ -403,6 +410,7 @@ function MainPage() {
 
                
             </ContactBar> 
+           
                     
             <Footer/>
             

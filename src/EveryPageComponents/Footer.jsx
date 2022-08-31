@@ -4,7 +4,7 @@ import React from 'react';
 const Box = styled.div`
   padding: 50px;
   background: #203942;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   @media (max-width: 1000px) {
